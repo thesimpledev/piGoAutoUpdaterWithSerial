@@ -4,7 +4,7 @@ BINARY := "bin/bootstrap"
 IPADD := '192.168.6.71'
 
 build-cli:
-    GOOS=linux GOARCH=arm go build -o bin/bootstrap ./cmd/cli/
+    GOOS=linux GOARCH=arm go build -o bin/bootstrap ./cmd/writer/
     
 build-reader:
     GOOS=linux GOARCH=amd64 go build -o bin/reader ./cmd/reader/
