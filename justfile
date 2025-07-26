@@ -3,8 +3,11 @@ GOARCH := "arm"
 BINARY := "bin/bootstrap"
 IPADD := '192.168.6.71'
 
-build:
-    GOOS={{GOOS}} GOARCH={{GOARCH}} go build -o {{BINARY}} ./cmd/cli/
+build-cli:
+    GOOS=linux GOARCH=arm go build -o bin/bootstrap ./cmd/cli/
+    
+build-reader:
+    GOOS=linux GOARCH=amd64 go build -o bin/reader ./cmd/reader/
 
 push:
     scp {{BINARY}} sstanton@{{IPADD}}:/home/sstanton/
@@ -18,4 +21,4 @@ start:
 ssh:
     ssh sstanton@{{IPADD}}
 
-deploy: build stop push start
+deploy: build-cli build-reader stop push start

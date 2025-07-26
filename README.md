@@ -12,4 +12,5 @@
 - [ ] Develop CLI Check API Version
 - [ ] Develop Updater
 - [ ] Deploy Script for Updater
+- [x] Develop Serial Connection
 - [ ] Write Tests
