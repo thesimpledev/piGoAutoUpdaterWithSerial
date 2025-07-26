@@ -8,7 +8,7 @@
 - [ ] Develop Lambda API for version
 - [ ] Deploy Script for Lambda
 - [ ] HTTP Gateway for lambda
-- [ ] Develop CLI Timer
+- [x] Develop CLI Timer
 - [ ] Develop CLI Check API Version
 - [ ] Develop Updater
 - [ ] Deploy Script for Updater
